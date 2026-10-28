@@ -1,0 +1,483 @@
+{
+  "manifest_version": "2.0",
+  "source_description": "Invented staff directory",
+  "operations": [
+    {
+      "op": "upsert_entity",
+      "entity_type": "organization",
+      "canonical_name": "Halloway Institute",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "An invented coastal research institute, the home of the demo world.",
+      "attributes": [
+        {
+          "key": "Kind",
+          "value": "research institute",
+          "source": "document"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Hosts",
+          "target_type": "place",
+          "target_name": "Pellow Bay",
+          "source": "document"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "organization",
+      "canonical_name": "Tidal Sensing Group",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Builds and runs moored sensors for coastal measurement.",
+      "aliases": [
+        "TSG"
+      ],
+      "relationships": [
+        {
+          "rel_type": "Part of",
+          "target_type": "organization",
+          "target_name": "Halloway Institute",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "organization",
+      "canonical_name": "Coastal Modelling Group",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Builds numerical models of tides and coastal flooding.",
+      "aliases": [
+        "CMG"
+      ],
+      "relationships": [
+        {
+          "rel_type": "Part of",
+          "target_type": "organization",
+          "target_name": "Halloway Institute",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "organization",
+      "canonical_name": "Quillfeather University",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "An invented university that sends visiting students."
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "place",
+      "canonical_name": "Pellow Bay",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "An invented harbour town and bay."
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Petronella Haverford",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Director of Halloway Institute.",
+      "identifiers": [
+        {
+          "key": "Email",
+          "value": "petronella.haverford@halloway.example",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "attributes": [
+        {
+          "key": "Role",
+          "value": "Director",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Leads",
+          "target_type": "organization",
+          "target_name": "Halloway Institute",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Ysolde Marchbank",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Group lead, Tidal Sensing Group, Halloway Institute.",
+      "identifiers": [
+        {
+          "key": "Email",
+          "value": "ysolde.marchbank@halloway.example",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "attributes": [
+        {
+          "key": "Role",
+          "value": "Group lead",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Tidal Sensing Group",
+          "source": "document",
+          "date": "2026-01"
+        },
+        {
+          "rel_type": "Leads",
+          "target_type": "organization",
+          "target_name": "Tidal Sensing Group",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Teodor M Vashenko",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Instrument engineer, Tidal Sensing Group, Halloway Institute.",
+      "identifiers": [
+        {
+          "key": "Email",
+          "value": "teodor.m.vashenko@halloway.example",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "attributes": [
+        {
+          "key": "Role",
+          "value": "Instrument engineer",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Tidal Sensing Group",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Wren A Calloway",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Data scientist, Tidal Sensing Group, Halloway Institute.",
+      "identifiers": [
+        {
+          "key": "Email",
+          "value": "wren.calloway@halloway.example",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "attributes": [
+        {
+          "key": "Role",
+          "value": "Data scientist",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Tidal Sensing Group",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Isembard Thistlewood",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Field technician, Tidal Sensing Group, Halloway Institute.",
+      "identifiers": [],
+      "attributes": [
+        {
+          "key": "Role",
+          "value": "Field technician",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Tidal Sensing Group",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Tamsin Ashdown",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Postdoctoral researcher, Tidal Sensing Group, Halloway Institute.",
+      "identifiers": [],
+      "attributes": [
+        {
+          "key": "Role",
+          "value": "Postdoctoral researcher",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Tidal Sensing Group",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Odalys Ferncastle",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Group lead, Coastal Modelling Group, Halloway Institute.",
+      "identifiers": [
+        {
+          "key": "Email",
+          "value": "odalys.ferncastle@halloway.example",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "attributes": [
+        {
+          "key": "Role",
+          "value": "Group lead",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Coastal Modelling Group",
+          "source": "document",
+          "date": "2026-01"
+        },
+        {
+          "rel_type": "Leads",
+          "target_type": "organization",
+          "target_name": "Coastal Modelling Group",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Ysolde Penhallow",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Numerical modeller, Coastal Modelling Group, Halloway Institute.",
+      "identifiers": [
+        {
+          "key": "Email",
+          "value": "ysolde.penhallow@halloway.example",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "attributes": [
+        {
+          "key": "Role",
+          "value": "Numerical modeller",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Coastal Modelling Group",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Emeric Stroud",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Research software engineer, Coastal Modelling Group, Halloway Institute.",
+      "identifiers": [],
+      "attributes": [
+        {
+          "key": "Role",
+          "value": "Research software engineer",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Coastal Modelling Group",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Hesper Valcourt",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Halloway Institute staff directory, January 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Visiting graduate student, Coastal Modelling Group, Halloway Institute.",
+      "identifiers": [],
+      "attributes": [
+        {
+          "key": "Role",
+          "value": "Visiting graduate student",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Coastal Modelling Group",
+          "source": "document",
+          "date": "2026-01"
+        },
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Quillfeather University",
+          "source": "document",
+          "date": "2026-01"
+        }
+      ]
+    }
+  ]
+}

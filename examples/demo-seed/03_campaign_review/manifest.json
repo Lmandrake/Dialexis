@@ -1,0 +1,336 @@
+{
+  "manifest_version": "2.0",
+  "source_description": "Invented meeting summary. Note the bare 'Wren Calloway' and 'Teodor Vashenko': commit resolves them to the stored fuller names.",
+  "operations": [
+    {
+      "op": "upsert_entity",
+      "entity_type": "organization",
+      "canonical_name": "Saltmarsh Instruments",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Spring Field Campaign Review, meeting summary, 2026-03-12",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "An invented company that makes underwater acoustic sensors."
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "place",
+      "canonical_name": "Brisco Point",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Spring Field Campaign Review, meeting summary, 2026-03-12",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "An invented headland at the mouth of Pellow Bay, used as a test site.",
+      "relationships": [
+        {
+          "rel_type": "Part of",
+          "target_type": "place",
+          "target_name": "Pellow Bay",
+          "source": "transcript",
+          "derived": "meeting_summary"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "technology_system",
+      "canonical_name": "SM-40 Hydrophone",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Spring Field Campaign Review, meeting summary, 2026-03-12",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "An underwater microphone made by Saltmarsh Instruments.",
+      "relationships": [
+        {
+          "rel_type": "Developed by",
+          "target_type": "organization",
+          "target_name": "Saltmarsh Instruments",
+          "source": "transcript",
+          "derived": "meeting_summary"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "technology_system",
+      "canonical_name": "Tidewright Buoy",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Spring Field Campaign Review, meeting summary, 2026-03-12",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "A moored buoy that carries the SM-40 Hydrophone and a water-level sensor.",
+      "relationships": [
+        {
+          "rel_type": "Uses",
+          "target_type": "technology_system",
+          "target_name": "SM-40 Hydrophone",
+          "source": "transcript",
+          "derived": "meeting_summary"
+        },
+        {
+          "rel_type": "Used by",
+          "target_type": "project",
+          "target_name": "Kestrel Array",
+          "source": "transcript",
+          "derived": "meeting_summary"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "project",
+      "canonical_name": "Kestrel Array",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Spring Field Campaign Review, meeting summary, 2026-03-12",
+          "archive": "{archive}"
+        }
+      ],
+      "attributes": [
+        {
+          "key": "Deployment window",
+          "value": "June 2026",
+          "source": "transcript",
+          "date": "2026-03-12",
+          "derived": "meeting_summary"
+        },
+        {
+          "key": "Test site",
+          "value": "Brisco Point",
+          "source": "transcript",
+          "date": "2026-03-12",
+          "derived": "meeting_summary"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "technology_concept",
+      "canonical_name": "Sensor Drift Correction",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Spring Field Campaign Review, meeting summary, 2026-03-12",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Correcting the slow drift of a sensor's readings, for example from biofouling, against a reference.",
+      "relationships": [
+        {
+          "rel_type": "Used by",
+          "target_type": "project",
+          "target_name": "Kestrel Array",
+          "source": "transcript",
+          "derived": "meeting_summary"
+        }
+      ],
+      "perspectives": [
+        {
+          "title": "Correct drift on the buoy",
+          "holder": "Ysolde Marchbank",
+          "evidence_type": "stated",
+          "claim": "Drift correction should run on the buoy itself, so that a fouled sensor is caught within hours.",
+          "source": "transcript",
+          "derived": "meeting_summary",
+          "date": "2026-03-12",
+          "status": "Active"
+        },
+        {
+          "title": "Correct drift ashore",
+          "holder": "Odalys Ferncastle",
+          "evidence_type": "stated",
+          "claim": "Raw readings should be shipped ashore and corrected there, so the Orrery Tide Model sees exactly what the instrument measured.",
+          "source": "transcript",
+          "derived": "meeting_summary",
+          "date": "2026-03-12",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "technology_concept",
+      "canonical_name": "Adaptive Acoustic Profiling",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Spring Field Campaign Review, meeting summary, 2026-03-12",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Changing how often a hydrophone samples in response to what it hears."
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Cosimo Brennagh",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Spring Field Campaign Review, meeting summary, 2026-03-12",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Engineer at Saltmarsh Instruments who supports the SM-40 Hydrophone.",
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Saltmarsh Instruments",
+          "source": "transcript",
+          "date": "2026-03-12",
+          "derived": "meeting_summary"
+        }
+      ],
+      "perspectives": [
+        {
+          "title": "SM-40 firmware fix by April",
+          "holder": "Cosimo Brennagh",
+          "evidence_type": "stated",
+          "claim": "A firmware fix for the SM-40 drift problem should ship by April 2026.",
+          "source": "transcript",
+          "derived": "meeting_summary",
+          "date": "2026-03-12",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Wren Calloway",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Spring Field Campaign Review, meeting summary, 2026-03-12",
+          "archive": "{archive}"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Works on",
+          "target_type": "technology_concept",
+          "target_name": "Adaptive Acoustic Profiling",
+          "source": "transcript",
+          "date": "2026-03-12",
+          "derived": "meeting_summary"
+        },
+        {
+          "rel_type": "Works on",
+          "target_type": "project",
+          "target_name": "Kestrel Array",
+          "source": "transcript",
+          "date": "2026-03-12",
+          "derived": "meeting_summary"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Teodor Vashenko",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Spring Field Campaign Review, meeting summary, 2026-03-12",
+          "archive": "{archive}"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Works on",
+          "target_type": "project",
+          "target_name": "Kestrel Array",
+          "source": "transcript",
+          "date": "2026-03-12",
+          "derived": "meeting_summary"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "event",
+      "canonical_name": "Spring Field Campaign Review 2026",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Spring Field Campaign Review, meeting summary, 2026-03-12",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Review of the Kestrel Array spring field campaign.",
+      "attributes": [
+        {
+          "key": "Date",
+          "value": "2026-03-12",
+          "source": "transcript",
+          "derived": "meeting_summary"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "About",
+          "target_type": "project",
+          "target_name": "Kestrel Array",
+          "source": "transcript",
+          "derived": "meeting_summary"
+        },
+        {
+          "rel_type": "Attended by",
+          "target_type": "person",
+          "target_name": "Ysolde Marchbank",
+          "source": "transcript",
+          "derived": "meeting_summary"
+        },
+        {
+          "rel_type": "Attended by",
+          "target_type": "person",
+          "target_name": "Teodor Vashenko",
+          "source": "transcript",
+          "derived": "meeting_summary"
+        },
+        {
+          "rel_type": "Attended by",
+          "target_type": "person",
+          "target_name": "Wren Calloway",
+          "source": "transcript",
+          "derived": "meeting_summary"
+        },
+        {
+          "rel_type": "Attended by",
+          "target_type": "person",
+          "target_name": "Odalys Ferncastle",
+          "source": "transcript",
+          "derived": "meeting_summary"
+        },
+        {
+          "rel_type": "Attended by",
+          "target_type": "person",
+          "target_name": "Emeric Stroud",
+          "source": "transcript",
+          "derived": "meeting_summary"
+        },
+        {
+          "rel_type": "Attended by",
+          "target_type": "person",
+          "target_name": "Cosimo Brennagh",
+          "source": "transcript",
+          "derived": "meeting_summary"
+        }
+      ]
+    }
+  ]
+}

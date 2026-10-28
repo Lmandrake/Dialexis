@@ -1,0 +1,41 @@
+{
+  "manifest_version": "2.0",
+  "source_description": "The owner's own ruling that the two Wren Calloways are different people.",
+  "operations": [
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Wren A Calloway",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Owner's note, 'two Wrens', 2026-04-04",
+          "archive": "{archive}"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Distinct from",
+          "target_type": "person",
+          "target_name": "Wren T Calloway",
+          "source": "manual",
+          "date": "2026-04-04"
+        }
+      ],
+      "notes": "Not Wren T Calloway: this is the Tidal Sensing Group data scientist (halloway.example email)."
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Wren T Calloway",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Owner's note, 'two Wrens', 2026-04-04",
+          "archive": "{archive}"
+        }
+      ],
+      "notes": "Not Wren A Calloway: this is the Corvane Marine Survey analyst (corvane.example email)."
+    }
+  ]
+}

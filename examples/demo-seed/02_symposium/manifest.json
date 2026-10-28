@@ -1,0 +1,471 @@
+{
+  "manifest_version": "2.0",
+  "source_description": "Invented symposium programme",
+  "operations": [
+    {
+      "op": "upsert_entity",
+      "entity_type": "organization",
+      "canonical_name": "Brackenmoor Foundation",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "An invented charitable foundation that funds coastal resilience work.",
+      "relationships": [
+        {
+          "rel_type": "Funds",
+          "target_type": "program",
+          "target_name": "Harbour Futures Program",
+          "source": "presentation",
+          "date": "2026-02-20"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "organization",
+      "canonical_name": "Pellow Bay Harbour Authority",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "The invented authority that runs the harbour at Pellow Bay.",
+      "relationships": [
+        {
+          "rel_type": "Hosted by",
+          "target_type": "place",
+          "target_name": "Pellow Bay",
+          "source": "presentation"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "program",
+      "canonical_name": "Harbour Futures Program",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "A Brackenmoor Foundation funding program for coastal projects around Pellow Bay."
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "program",
+      "canonical_name": "Brackenmoor Early Career Fellowship",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "An annual fellowship for early-career coastal researchers.",
+      "relationships": [
+        {
+          "rel_type": "Funded by",
+          "target_type": "organization",
+          "target_name": "Brackenmoor Foundation",
+          "source": "presentation"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "project",
+      "canonical_name": "Kestrel Array",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "A network of moored sensor buoys measuring water level and sound in Pellow Bay.",
+      "relationships": [
+        {
+          "rel_type": "Funded by",
+          "target_type": "program",
+          "target_name": "Harbour Futures Program",
+          "source": "presentation",
+          "date": "2026-02-20"
+        },
+        {
+          "rel_type": "Part of",
+          "target_type": "organization",
+          "target_name": "Tidal Sensing Group",
+          "source": "presentation",
+          "date": "2026-02-20"
+        },
+        {
+          "rel_type": "Led by",
+          "target_type": "person",
+          "target_name": "Ysolde Marchbank",
+          "source": "presentation",
+          "date": "2026-02-20"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "project",
+      "canonical_name": "Orrery Tide Model",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "An ensemble tide forecast for Pellow Bay.",
+      "relationships": [
+        {
+          "rel_type": "Funded by",
+          "target_type": "program",
+          "target_name": "Harbour Futures Program",
+          "source": "presentation",
+          "date": "2026-02-20"
+        },
+        {
+          "rel_type": "Part of",
+          "target_type": "organization",
+          "target_name": "Coastal Modelling Group",
+          "source": "presentation",
+          "date": "2026-02-20"
+        },
+        {
+          "rel_type": "Led by",
+          "target_type": "person",
+          "target_name": "Odalys Ferncastle",
+          "source": "presentation",
+          "date": "2026-02-20"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "project",
+      "canonical_name": "Flood Atlas",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "A public flood-risk map of the Pellow Bay shoreline.",
+      "relationships": [
+        {
+          "rel_type": "Funded by",
+          "target_type": "program",
+          "target_name": "Harbour Futures Program",
+          "source": "presentation",
+          "date": "2026-02-20"
+        },
+        {
+          "rel_type": "Part of",
+          "target_type": "organization",
+          "target_name": "Quillfeather University",
+          "source": "presentation",
+          "date": "2026-02-20"
+        },
+        {
+          "rel_type": "Led by",
+          "target_type": "person",
+          "target_name": "Zillah Morrow",
+          "source": "presentation",
+          "date": "2026-02-20"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "project",
+      "canonical_name": "Seawall Census",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "A survey of every harbour defence in Pellow Bay.",
+      "relationships": [
+        {
+          "rel_type": "Funded by",
+          "target_type": "program",
+          "target_name": "Harbour Futures Program",
+          "source": "presentation",
+          "date": "2026-02-20"
+        },
+        {
+          "rel_type": "Part of",
+          "target_type": "organization",
+          "target_name": "Pellow Bay Harbour Authority",
+          "source": "presentation",
+          "date": "2026-02-20"
+        },
+        {
+          "rel_type": "Led by",
+          "target_type": "person",
+          "target_name": "Delphine Ruskin",
+          "source": "presentation",
+          "date": "2026-02-20"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Ambrose Merriweather",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Program officer at the Brackenmoor Foundation, responsible for the Harbour Futures Program.",
+      "attributes": [
+        {
+          "key": "Role",
+          "value": "Program officer",
+          "source": "presentation",
+          "date": "2026-02-20"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Brackenmoor Foundation",
+          "source": "presentation",
+          "date": "2026-02-20"
+        },
+        {
+          "rel_type": "Leads",
+          "target_type": "program",
+          "target_name": "Harbour Futures Program",
+          "source": "presentation",
+          "date": "2026-02-20"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Seraphine Lucan",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Fellowship coordinator at the Brackenmoor Foundation.",
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Brackenmoor Foundation",
+          "source": "presentation",
+          "date": "2026-02-20"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Zillah Morrow",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Leads the Flood Atlas at Quillfeather University.",
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Quillfeather University",
+          "source": "presentation",
+          "date": "2026-02-20"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Delphine Ruskin",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Leads the Seawall Census at the Pellow Bay Harbour Authority.",
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Pellow Bay Harbour Authority",
+          "source": "presentation",
+          "date": "2026-02-20"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Lisbeth Arkwright",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Researcher at Quillfeather University who works on ensemble tide forecasting.",
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Quillfeather University",
+          "source": "presentation",
+          "date": "2026-02-20"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "technology_concept",
+      "canonical_name": "Ensemble Tide Forecasting",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Forecasting tides from many perturbed model runs instead of one, to express uncertainty.",
+      "relationships": [
+        {
+          "rel_type": "Used by",
+          "target_type": "project",
+          "target_name": "Orrery Tide Model",
+          "source": "presentation"
+        },
+        {
+          "rel_type": "Developed by",
+          "target_type": "person",
+          "target_name": "Lisbeth Arkwright",
+          "source": "presentation"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Tamsin Ashdown",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "events": [
+        {
+          "date": "2026-02-20",
+          "desc": "Announced as the 2026 Brackenmoor Early Career Fellow",
+          "source": "presentation"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Funded by",
+          "target_type": "program",
+          "target_name": "Brackenmoor Early Career Fellowship",
+          "source": "presentation",
+          "date": "2026-02-20"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "event",
+      "canonical_name": "Harbour Futures Annual Symposium 2026",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Harbour Futures Annual Symposium programme, 2026-02-20",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "The Harbour Futures Program's annual symposium, hosted by the Brackenmoor Foundation at Pellow Bay.",
+      "attributes": [
+        {
+          "key": "Date",
+          "value": "2026-02-20",
+          "source": "presentation"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Hosted by",
+          "target_type": "organization",
+          "target_name": "Brackenmoor Foundation",
+          "source": "presentation"
+        },
+        {
+          "rel_type": "Hosted by",
+          "target_type": "place",
+          "target_name": "Pellow Bay",
+          "source": "presentation"
+        },
+        {
+          "rel_type": "Attended by",
+          "target_type": "person",
+          "target_name": "Ambrose Merriweather",
+          "source": "presentation"
+        },
+        {
+          "rel_type": "Attended by",
+          "target_type": "person",
+          "target_name": "Seraphine Lucan",
+          "source": "presentation"
+        },
+        {
+          "rel_type": "Attended by",
+          "target_type": "person",
+          "target_name": "Lisbeth Arkwright",
+          "source": "presentation"
+        },
+        {
+          "rel_type": "Attended by",
+          "target_type": "person",
+          "target_name": "Tamsin Ashdown",
+          "source": "presentation"
+        },
+        {
+          "rel_type": "About",
+          "target_type": "program",
+          "target_name": "Harbour Futures Program",
+          "source": "presentation"
+        }
+      ]
+    }
+  ]
+}

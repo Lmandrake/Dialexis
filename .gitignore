@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+
+# Rate-limit state
+.web_search_last
+
+# Read-path access log: raw, high-churn, disposable. One line per lookup, so tracking it
+# would spam the history — and an auto-commit job may commit untracked files soon after they
+# settle, which is why this entry exists BEFORE the file does. The durable artifact is the
+# roll-up at docs/paper/ACCESS_METRICS.md: tracked, no query text, regenerable with
+# `run.py access_log --rollup`.
+.access-log.jsonl
+
+# DIALEXIS specific
+# No repo-local inbox: sources are read only from the Drive-synced inbox
+# (DIALEXIS_INBOX_DIR in .env). stage_inbox refuses to run without it.
+# batches/ is transient ingestion work. Match FILES as well as directories: the old
+# `batches/*/` pattern only ignored subdirectories, so a stray manifest written to
+# batches/ root showed up as untracked and could be committed by accident.
+batches/*
+!batches/.gitkeep
+output/*
+!output/.gitkeep
+graph/_index/*
+!graph/_index/.gitkeep
+
+# Keep archive structure but ignore large source files
+archive/raw_inbox/*
+!archive/raw_inbox/.gitkeep
+archive/retired/*
+!archive/retired/.gitkeep
+
+# SDD scratch workspace (subagent-driven-development)
+.superpowers/
+
+# Git worktrees created by Claude Code. These hold a gitdir pointer, not content —
+# the automated `chore(sync)` job's `git add -A` committed one to main on 2026-09-11,
+# leaving a tracked path that pointed at nothing once the worktree was removed.
+.claude/worktrees/
+
+# Stale index re-added by a sync sweep (137ecf6e); nothing reads it.
+working_model/
+examples/demo-graph/

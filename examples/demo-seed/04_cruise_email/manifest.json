@@ -1,0 +1,186 @@
+{
+  "manifest_version": "2.0",
+  "source_description": "Invented email. A SECOND Wren Calloway, distinguished by middle initial and email; the deployment window now contradicts the stored one, so it is recorded as a conflict rather than overwritten.",
+  "operations": [
+    {
+      "op": "upsert_entity",
+      "entity_type": "organization",
+      "canonical_name": "Corvane Marine Survey",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Email from Wren T Calloway, 'Brisco Point recovery cruise', 2026-04-03",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "An invented marine survey company with its own survey vessel."
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Wren T Calloway",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Email from Wren T Calloway, 'Brisco Point recovery cruise', 2026-04-03",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Survey analyst at Corvane Marine Survey. Not the Halloway Institute data scientist of the same name.",
+      "identifiers": [
+        {
+          "key": "Email",
+          "value": "wren.calloway@corvane.example",
+          "source": "email",
+          "date": "2026-04-03"
+        }
+      ],
+      "attributes": [
+        {
+          "key": "Role",
+          "value": "Survey analyst",
+          "source": "email",
+          "date": "2026-04-03"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Corvane Marine Survey",
+          "source": "email",
+          "date": "2026-04-03"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Bram Oakhurst",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Email from Wren T Calloway, 'Brisco Point recovery cruise', 2026-04-03",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Skipper of the Corvane Marine Survey survey vessel.",
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Corvane Marine Survey",
+          "source": "email",
+          "date": "2026-04-03"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "person",
+      "canonical_name": "Ottoline Vantreese",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Email from Wren T Calloway, 'Brisco Point recovery cruise', 2026-04-03",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Survey lead at Corvane Marine Survey.",
+      "relationships": [
+        {
+          "rel_type": "Member of",
+          "target_type": "organization",
+          "target_name": "Corvane Marine Survey",
+          "source": "email",
+          "date": "2026-04-03"
+        }
+      ]
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "event",
+      "canonical_name": "Brisco Point Recovery Cruise 2026",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Email from Wren T Calloway, 'Brisco Point recovery cruise', 2026-04-03",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Recovery of the two trial Tidewright buoys from Brisco Point.",
+      "attributes": [
+        {
+          "key": "Date",
+          "value": "2026-04-02",
+          "source": "email"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Hosted by",
+          "target_type": "place",
+          "target_name": "Brisco Point",
+          "source": "email"
+        },
+        {
+          "rel_type": "About",
+          "target_type": "project",
+          "target_name": "Kestrel Array",
+          "source": "email"
+        },
+        {
+          "rel_type": "Uses",
+          "target_type": "technology_system",
+          "target_name": "Tidewright Buoy",
+          "source": "email"
+        },
+        {
+          "rel_type": "Attended by",
+          "target_type": "person",
+          "target_name": "Wren T Calloway",
+          "source": "email"
+        },
+        {
+          "rel_type": "Attended by",
+          "target_type": "person",
+          "target_name": "Bram Oakhurst",
+          "source": "email"
+        },
+        {
+          "rel_type": "Attended by",
+          "target_type": "person",
+          "target_name": "Ottoline Vantreese",
+          "source": "email"
+        }
+      ]
+    },
+    {
+      "op": "add_conflict",
+      "entity_type": "project",
+      "canonical_name": "Kestrel Array",
+      "title": "Deployment window",
+      "value_a": "June 2026 (Spring Field Campaign Review, 2026-03-12)",
+      "value_b": "September 2026 (email from Wren T Calloway, 2026-04-03: the SM-40 firmware fix has not shipped)"
+    },
+    {
+      "op": "upsert_entity",
+      "entity_type": "project",
+      "canonical_name": "Kestrel Array",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Email from Wren T Calloway, 'Brisco Point recovery cruise', 2026-04-03",
+          "archive": "{archive}"
+        }
+      ],
+      "events": [
+        {
+          "date": "2026-04-03",
+          "desc": "Deployment window reported as slipping to September 2026",
+          "source": "email"
+        }
+      ]
+    }
+  ]
+}

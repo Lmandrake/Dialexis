@@ -1,0 +1,68 @@
+{
+  "manifest_version": "2.0",
+  "source_description": "Invented technical report",
+  "operations": [
+    {
+      "op": "upsert_entity",
+      "entity_type": "document",
+      "canonical_name": "Kestrel Array Validation Report",
+      "status": "Active",
+      "sources": [
+        {
+          "name": "Kestrel Array Validation Report, April 2026",
+          "archive": "{archive}"
+        }
+      ],
+      "summary": "Six weeks of Tidewright Buoy records from Brisco Point compared with a shore tide gauge.",
+      "attributes": [
+        {
+          "key": "Document type",
+          "value": "technical_report",
+          "source": "pdf"
+        },
+        {
+          "key": "Date published",
+          "value": "2026-04",
+          "source": "pdf"
+        },
+        {
+          "key": "Key result",
+          "value": "Water-level error under 2 cm with on-buoy drift correction",
+          "source": "pdf"
+        }
+      ],
+      "relationships": [
+        {
+          "rel_type": "Authored by",
+          "target_type": "person",
+          "target_name": "Tamsin Ashdown",
+          "source": "pdf"
+        },
+        {
+          "rel_type": "Authored by",
+          "target_type": "person",
+          "target_name": "Teodor M Vashenko",
+          "source": "pdf"
+        },
+        {
+          "rel_type": "About",
+          "target_type": "project",
+          "target_name": "Kestrel Array",
+          "source": "pdf"
+        },
+        {
+          "rel_type": "About",
+          "target_type": "technology_concept",
+          "target_name": "Sensor Drift Correction",
+          "source": "pdf"
+        },
+        {
+          "rel_type": "Part of",
+          "target_type": "organization",
+          "target_name": "Halloway Institute",
+          "source": "pdf"
+        }
+      ]
+    }
+  ]
+}

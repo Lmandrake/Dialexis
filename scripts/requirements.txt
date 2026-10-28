@@ -1,0 +1,4 @@
+# Optional dependencies for enhanced web fetching
+# Install with: pip install -r scripts/requirements.txt
+# Then run: playwright install chromium
+playwright>=1.40
