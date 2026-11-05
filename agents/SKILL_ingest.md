@@ -208,7 +208,7 @@ Commit.py **rejects** incorrect field names. Use these exact keys:
 | Section | Field | NOT this | Notes |
 |---------|-------|----------|-------|
 | manifest (top-level) | `unresolved` | — | Optional list of items you could not place safely (each a string or object with a reason). **Non-empty HALTs the whole commit, nothing written**, printing each item — resolve them and empty the list |
-| operation (top-level) | `op` | — | `upsert_entity`, `add_conflict`, `resolve_conflict`, `rename_entity`, `merge_entity`, `reclassify_entity`, `prune_attribute`, `prune_alias`, `prune_relationship`, `prune_event`, `prune_perspective`, or `prune_note` |
+| operation (top-level) | `op` | — | `upsert_entity`, `add_conflict`, `resolve_conflict`, `rename_entity`, `merge_entity`, `reclassify_entity`, `prune_attribute`, `prune_alias`, `prune_relationship`, `prune_event`, `prune_perspective`, `prune_note`, or `prune_source` |
 | operation (top-level) | `entity_type` | — | Must exist in registry |
 | operation (top-level) | `canonical_name` | ~~entity_name~~ | The entity's canonical display name |
 | events | `desc` | ~~description~~ | Short text of what happened |
@@ -262,6 +262,8 @@ Commit.py **rejects** incorrect field names. Use these exact keys:
 | prune_perspective | `titles` / `match` | — | Exact titles and/or `{field: exact value}` specs (e.g. `{"title": "Untitled", "claim": "..."}` for duplicated untitled ones); each must match exactly one perspective, else HALT |
 | prune_note | `entity_type`, `canonical_name` | — | Entity (its file must exist) |
 | prune_note | `contains` | — | Exact substrings; each removes the one Notes paragraph/bullet containing it; HALTS on no match or >1 match |
+| prune_source | `entity_type`, `canonical_name` | — | Entity (its file must exist) |
+| prune_source | `archives` | — | Exact archive paths; removes every Sources entry with that archive; HALTS if any path matches no entry |
 
 ### Perspectives: holder vs `evidence_type: "inferred"`
 

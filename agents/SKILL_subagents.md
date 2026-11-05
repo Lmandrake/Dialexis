@@ -88,10 +88,11 @@ so the merged manifest applies cleanly.)
 
 **Model tier** is pinned in each agent's frontmatter: extractor, researcher and triager run `sonnet`
 (well-defined work with a deterministic checker behind it); deduper runs `opus` (an irreversible
-judgment). Fleet ladder (owner, 2026-10-20): `opus` design and complex code; `sonnet` well-defined coding, prose
-a human acts on, cross-context judgment; `haiku` (Haiku 5.5) mechanical bulk work with a checkable
-outcome. No Fable; pass `model` on every spawn. What the aliases resolve to is set by
-`ANTHROPIC_DEFAULT_OPUS_MODEL` / `_SONNET_MODEL` / `_HAIKU_MODEL`, not by this file: read the
+judgment). Fleet ladder: `opus` design and complex code; `sonnet` well-defined coding, prose
+a human acts on, cross-context judgment, and the floor. Haiku is banned everywhere (owner, 2026-10-31:
+"Ban it everywhere"; "Sonnet 5.5 is the lowest model to consider, due to Haiku's error rate."),
+reversing the 2026-10-20 restoration. No Fable; pass `model` on every spawn. What the aliases resolve to is set by
+`ANTHROPIC_DEFAULT_OPUS_MODEL` / `_SONNET_MODEL`, not by this file: read the
 environment (or `genai-switch status`) before trusting a rung.
 
 ## Guardrails

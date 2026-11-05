@@ -1125,6 +1125,29 @@ class Committer:
         e.notes = "".join(out).strip()
         self._touch(e, when)
 
+    def prune_source(self, op: dict, when: str) -> None:
+        """Remove Sources entries, each named by its exact archive path.
+
+        Fields: entity_type, canonical_name, archives (non-empty list of exact archive strings).
+        Every entry whose archive equals a listed string is removed, whatever its name. HALTS if
+        any listed archive matches no entry (typo guard), so a prune can never silently no-op.
+        This is the only sanctioned way to delete a Sources entry; upsert only ever appends."""
+        e = self._require_entity("prune_source", op)
+        archives = op.get("archives")
+        if not archives or not isinstance(archives, list) or not all(
+                isinstance(a, str) and a.strip() for a in archives):
+            raise CommitError(
+                "prune_source: 'archives' must be a non-empty list of exact archive paths.")
+        present = {s.get("archive") for s in e.sources}
+        missing = [a for a in archives if a not in present]
+        if missing:
+            raise CommitError(
+                f"prune_source: {e.canonical_name} has no Sources entry with archive "
+                f"{missing!r} to remove.")
+        drop = set(archives)
+        e.sources = [s for s in e.sources if s.get("archive") not in drop]
+        self._touch(e, when)
+
 
 _RELATED_TYPES = {"project", "program", "technology_system", "technology_concept", "event"}
 
@@ -1332,7 +1355,7 @@ def commit_manifest(manifest: dict, registry=None) -> dict:
                 "prune_attribute": c.prune_attribute, "prune_alias": c.prune_alias,
                 "prune_relationship": c.prune_relationship, "prune_event": c.prune_event,
                 "prune_perspective": c.prune_perspective, "prune_note": c.prune_note,
-                "upsert_action": c.upsert_action, "archive_action": c.archive_action}
+                "prune_source": c.prune_source, "upsert_action": c.upsert_action, "archive_action": c.archive_action}
 
     for i, op in enumerate(manifest.get("operations", [])):
         kind = op.get("op")

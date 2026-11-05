@@ -22,7 +22,7 @@ mail scan or web search only reconstructs slowly and less accurately.
 
 So run `run.py entity "<name>"` **before** searching mail, searching the web, or asking the user,
 whenever a task touches any of those, **including when the name is incidental** to a bigger job:
-drafting an email to a colleague, writing a position statement that mentions AKD, building a quad
+drafting an email to a colleague, writing a position statement that mentions a technology, building a quad
 chart for ACME, prepping for a meeting with a program manager. A first name alone is enough of a
 trigger; `resolve` narrows it. Fall back to mail or the web only for what Dialexis does not hold,
 and say which facts came from where.
