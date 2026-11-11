@@ -12,6 +12,16 @@ ENFORCE  →  commit.py        applies atomically, writes reciprocals, or HALTs
 DETECT   →  validate.py      reads from disk, halts loudly on any violation
 ```
 
+## First run
+
+- **Environment**: no root `pyproject.toml`. This checkout's `.venv` (Python 3.12 via uv) already carries the heavy stack — flask, huggingface-hub, sentence-transformers, torch, transformers — for `viz/`; the deterministic core (`run.py`, `scripts/`) is stdlib-only and needs nothing past Python 3.9+. Optional web-fetch extras: `python3 -m pip install --break-system-packages -r requirements-optional.txt`, then `python3 -m playwright install chromium`; Slack relay extras are in `slack/requirements.txt`.
+- **Console scripts**: none declared — there is no `pyproject.toml` with a `[project.scripts]` table. Every capability runs as `python3 run.py <script_name>` (e.g. `system_status`, `doctor`).
+- **Login/token**: `SLACK_BOT_TOKEN` and `SLACK_APP_TOKEN` (named, never valued, in `.env.example`) for the Slack relay (`slack/bot.py`); no login subcommand was found elsewhere in this repo.
+- **The job**: two LaunchAgent templates, `deploy/com.dialexis.publish.plist.template` (Label `com.dialexis.publish`) and `deploy/com.dialexis.slack.plist.template` (Label `com.dialexis.slack`); both are installed on this machine at `~/Library/LaunchAgents/`. Nothing auto-installs a LaunchAgent from a fresh clone.
+- 🛑 Writes only from a session the owner launched in this checkout, enforced by a PreToolUse writer-gate hook — documented in this repo at `agents/CONVENTIONS.md` ("One writer at a time"); every other session's write is diverted into the shared Drive inbox instead.
+
+*Detected 2026-11-10, not verified by running it.*
+
 ## What is different about it
 
 **A refused write is the feature.** `commit.py` checks the whole manifest against a closed vocabulary (the [entity registry](agents/ENTITY_TYPE_REGISTRY.md)). If any part is illegal, nothing is written and it prints `HALT`. The model is told that a halt means the design worked, so it fixes the manifest instead of hunting for a way past the check. Reciprocal edges, dates and file placement are produced by code, because a requirement written into a prompt is only a prior, not a constraint ([why v2 exists](DIALEXIS_SYSTEM.md)).

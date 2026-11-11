@@ -1473,7 +1473,7 @@ def _record_halt(manifest_path: Path, violation: Exception) -> None:
     prints to stderr, and `batches/` is gitignored transient work that reconcile auto-cleans.
     So the one signal that says how often the enforcer actually catches something was being
     discarded on every run, which is why the enforcement layer could not be measured
-    retrospectively at all -- see docs/superpowers/specs/2026-09-11-evaluation-protocol.md §2.
+    retrospectively at all -- see design/specs/2026-09-11-evaluation-protocol.md §2.
 
     Machine-local and gitignored deliberately. HALTs are frequent during ordinary manifest
     iteration, and a tracked append-only log would collide between writer machines on
